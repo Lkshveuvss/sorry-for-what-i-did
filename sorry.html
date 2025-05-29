@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <style>*{
+	box-sizing: border-box;
+}
+
+h1,
+p {
+	font-family: "Quicksand";
+  font-optical-sizing: auto;
+}
+
+h1 {
+	font-weight: 200;
+}
+
+body {
+	margin: 0px;
+}
+
+.instruction{
+	position: absolute;
+	font-size: 1.6rem;
+	color: rgba(255, 0, 0, 0.554);
+	top: 36%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.heart {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	transition: transform 2s;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.heart > img {
+	width: 50px;
+	height: auto;
+
+	animation-name: beat;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+}
+
+.message {
+	padding: 25px;
+	background-color: #eee;
+	font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
+	font-size: clamp(16px, 10vw, 17px);
+	text-align: justify;
+	line-height: 1.5em;
+	width: 80%;
+	max-width: 550px;
+	height: 78%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 0;
+
+	animation-name: openmsg;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	border-radius: 5px;
+	overflow: scroll;
+	scrollbar-width: none;
+}
+ 
+.message .sincere{
+	text-align: left;
+	font-family: "Cinzel, serif";
+	font-size: 14px;
+	line-height: 1.2em;
+}
+
+.message .sincere p{
+	margin: 0;
+}
+
+@keyframes beat {
+	0% {
+		width: 50px;
+	}
+	25% {
+		width: 58px;
+	}
+	30% {
+		width: 50px;
+	}
+	50% {
+		width: 45px;
+	}
+	60% {
+		width: 50px;
+	}
+	75% {
+		width: 58px;
+	}
+	100% {
+		width: 50px;
+	}
+}
+
+@keyframes openmsg {
+	0% {
+		height: 0px;
+		padding: 0px 20px;
+	}
+	100% {
+		height: 75%;
+		padding: 20px 20px;
+	}
+}
+
+@keyframes heartMove {
+	0% {
+		top: 50%
+	}
+	100% {
+		top: 85%;
+		transform: translate(-50%, 0);
+	}
+}
+
+.openNor {
+	animation-direction: normal;
+	animation-play-state: running;
+}
+
+.closeNor {
+	animation-direction: reverse;
+	animation-play-state: running;
+}
+
+.no-anim {
+	animation: none;
+}
+
+.closed {
+	height: 0px;
+	padding: 0px 20px;
+}
+
+.bottom {
+	bottom: 5px;
+}
+
+.openHer {
+	animation-name: heartMove;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+}
+
+.closeHer {
+	animation-name: heartMove;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-play-state: running;
+	animation-direction: reverse;
+	animation-fill-mode: forwards;
+}
+
+.beating > img {
+	animation-name: beat;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+}
+
+.openedHer {
+	top: 85%;
+	transform: translate(-50%, 0);
+}</style>
+        <title>I'm sorry for what i did</title>
+    </head>
+    <body>
+        <p class="instruction">Click the Bakugo!</p>
+        <div class="container">
+            <label>
+            <div class="heart">
+                <div class="heart">
+                  <img src="data:image/jpeg;base64,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" alt="Bakugo icon">
+                </div>
+            </div>
+            <input id="messageState" type="checkbox" style="display:none"/>
+            </label>
+            <div class="message">
+                <h1 style="font-family: Cinzel, serif; font-size: 40px; letter-spacing: 1.2px;">Dear Eaint</h1>
+                <p> 
+                    <span>
+                        &emsp; i guess we have been friends for 4 years and guess, i didn't know that much about you. I'm sorry for what i did i'm sorry for getting high score cuz you expected me to get a lot score i swear, and mostly you might be sad bec i didn't know that much about you i think i can know better from now on.
+                    </span>
+                    <br> <br>
+                    <span>
+                        &emsp;  although what i did was unforgiveable, i deserve every single thing you said i deserve every hate you have on me bec of that i won't complain bec i really deserve it. Now i'm writing this letter for you to be better i know i'm such a bad friend not knowing what you like but i won't complain even if you say so i won't do nothing, i will try to know you better from now on. I know i'm always saying that and i guess i never success i guess. but i will try to know you better and understand you i hope you feel better.
+                    </span>      
+                </p>
+                <br>
+                <div class="sincere">
+                    <p style="font-weight: bold;"> With Love,</p>
+                    <p>Lk</p>
+                 </div>
+            </div>
+        </div>
+        
+        <script src="jquery.js"></script>
+        <script src="jquery2.1.js"></script>
+        <script>
+            $("#messageState").on("change", (x) => {
+	$(".message").removeClass("openNor").removeClass("closeNor");
+	if ($("#messageState").is(":checked")) {
+		$(".message").removeClass("closed").removeClass("no-anim").addClass("openNor");
+		$(".heart").removeClass("closeHer").removeClass("openedHer").addClass("openHer");
+		$(".container").stop().animate({"backgroundColor": "#2596be"}, 2000);
+		console.log("Abrindo");
+	} else {
+		$(".message").removeClass("no-anim").addClass("closeNor");
+		$(".heart").removeClass("openHer").removeClass("openedHer").addClass("closeHer");
+		$(".container").stop().animate({"backgroundColor": "#e07b39"}, 2000);
+		console.log("fechando");
+	}
+});
+
+$(".message").on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+	console.log("Animation End");
+	if ($(".message").hasClass("closeNor"))
+		$(".message").addClass("closed");
+	$(".message").removeClass("openNor").removeClass("closeNor").addClass("no-anim");
+});
+
+$(".heart").on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+	console.log("Animation End");
+	if (!$(".heart").hasClass("closeHer"))
+		$(".heart").addClass("openedHer").addClass("beating");
+	else
+		$(".heart").addClass("no-anim").removeClass("beating");
+	$(".heart").removeClass("openHer").removeClass("closeHer");
+});
+        </script>
+    </body>
+</html>
+
